@@ -14,9 +14,12 @@ document.getElementById('bookmark-form').addEventListener('submit', function (e)
     card.classList.add('card');
     card.innerHTML = `
         <h2>${title}</h2>
-        <i class="fa fa-external-link" aria-hidden="true"></i>   <a href="${url}" target="_blank">${url}</a>
+        <div >
+       <a href="${url}" target="_blank" class="wro"><i class="fa fa-external-link" aria-hidden="true"> ${url} </i></a>
+        </div>
+        
         <div class="button-group">
-            <button class="edit-btn" onclick="editBookmark(this)">
+            <button class="edit-btn " onclick="editBookmark(this)">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
             <button class="delete-btn" onclick="deleteBookmark(this)">
             <i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
